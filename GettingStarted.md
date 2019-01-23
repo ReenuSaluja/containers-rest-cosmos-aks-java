@@ -46,7 +46,7 @@ The application will be deployed into three different clusters in three differen
 
 * **Azure Container Registry (ACR)**, the Azure container registry will be created for holding the application container images. You could potentially use publicly available registries such as Docker. However, for an enterprise grade application we recommend using Azure Container registry that is secured as well as has integration touchpoints with deployment pipelines. To know more about ACR, you can refer to the [Microsoft docs](https://docs.microsoft.com/en-us/azure/container-service/). 
 
-#### Please go through the setup instructions in Global Resources [Readme.md](infrastructure/global-resources/readme.md)  to deploy the three resources into your Azure Subscription. Also, import IMDB data into the created Azure Cosmos DB.
+#### Please go through the setup instructions in Global Resources [Readme.md](./infrastructure/global-resources/readme.md)  to deploy the three resources into your Azure Subscription. Also, import IMDB data into the created Azure Cosmos DB.
 
 
 ## Step 3: Deploy Infrastructure on Azure through ARM Template
