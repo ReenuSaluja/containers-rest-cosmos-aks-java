@@ -1,10 +1,16 @@
 # Global Resource Deployment
+This application uses a CosmosDB instance enabled with the MongoDB API, an Azure Container Registry to push and pull images and Azure traffic manager that could route traffic across multiple regions.
+These are global resources and should be deployed independently of application infrastructure.
 
 ## Global Resources Setup
 
 The ARM Template [azuredeploy.json](./azuredeploy.json) creates the Azure Traffic Manager, Cosmos DB and Azure Container Registry resources that will be common to all three regions. You can use the following command on Azure CLI to deploy the template.
 
 ```
+## skip this if you alread have a resource group created
+az group create --name your-resource-group  
+
+## Deploy the template
 az group deployment create --template-file <your local directory>/azuredeploy.json --resource-group your-resource-group 
 ```
 
@@ -57,8 +63,7 @@ The template accepts following optional parameters, if not provided it assumes d
 
 ## CosmosDB
 
-This application uses a CosmosDB instance enabled with the MongoDB API and an Azure Container Registry to push and pull images.
-These are global resources and should be deployed independently of application infrastructure.
+
 Deploy your own using the button below, which uses the included ARM template.
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/Microsoft/containers-rest-cosmos-appservice-java/infrastructure/global-resources)
