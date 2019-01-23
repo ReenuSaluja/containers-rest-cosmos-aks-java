@@ -46,12 +46,12 @@ The application will be deployed into three different clusters in three differen
 
 * **Azure Container Registry (ACR)**, the Azure container registry will be created for holding the application container images. You could potentially use publicly available registries such as Docker. However, for an enterprise grade application we recommend using Azure Container registry that is secured as well as has integration touchpoints with deployment pipelines. To know more about ACR, you can refer to the [Microsoft docs](https://docs.microsoft.com/en-us/azure/container-service/). 
 
-#### Please go through the setup instructions in Global Resources [Readme.md](./infrastructure/global-resources/readme.md)  to deploy the three resources into your Azure Subscription. Also, import IMDB data into the created Azure Cosmos DB.
+#### Please go through the setup instructions in Global Resources [Readme.md](infrastructure/global-resources/README.md)  to deploy the three resources into your Azure Subscription. Also, import IMDB data into the created Azure Cosmos DB.
 
 
 ## Step 3: Deploy Infrastructure on Azure through ARM Template
 The Azure Resource Manager (ARM) enables provisioning resources on Azure. The ARM template currently deploys all the needed resources within a specified region. You will need to deploy the template in all the regions you would want to deploy the application to. 
-#### Following the setup instructions on [infrastructure readme.md](infrastructure/readme.md) for step by step creation of regional resources.
+#### Following the setup instructions on [infrastructure readme.md](infrastructure/README.md) for step by step creation of regional resources.
 
 
 ## Step 4: Setup & run Build Pipeline
@@ -64,11 +64,11 @@ This application deploys GitOps for building the Release Pipeline. The release p
 
 The current set of instructions is and we will be adding an automated shell script.
 
-#### Follow the instructions on [Gitops Readme.md](gitops/readme.md).
+#### Follow the instructions on [Gitops Readme.md](gitops/README.md).
 
 
 ## Step 6: Update Traffic Manager & Cosmos DB endpoints
-Once you have created and deployed the application across all regions you will need to update the traffic manager's endpoints to point to the application end-points in all three regions. You can do that by deploying the [endpoint_deploy.json](infrastructure/global-resources/readme.md#traffic-manager-endpoints) template.
+Once you have created and deployed the application across all regions you will need to update the traffic manager's endpoints to point to the application end-points in all three regions. You can do that by deploying the [endpoint_deploy.json](infrastructure/global-resources/README.md#traffic-manager-endpoints) template.
 
 Also, additionally the CosmosDB can be integrated with the Virtual Network endpoints for all the Virtual networks in the three regions. This will limit access to the CosmosDB database only to the clusters deployed in the Virtual selected networks. You can do that by following simple steps on the [portal](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-configure-vnet-service-endpoint).
 
