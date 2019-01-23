@@ -100,7 +100,7 @@ We are continually evolving the code incorporating best practices, and will be d
 | Spring Boot Application based on IMDB Data | This is a sample application and you can easily replace with your own application
 | IMDB Data import scripts | The scripts to load and store IMDB data in Azure Cosmos DB using the Mongo API, you can replace this with your own cosmos DB data
 | Build pipeline | Built in Azure DevOps, the pipeline creates an image with the application and pushes the image into Azure Container Registry
-| Deployment pipeline | Built using GitOps[TODO: Add reference link here], triggers deployment using tags from Azure Container Registry into an Azure Kubernetes Cluster
+| Deployment pipeline | Built using GitOps, triggers deployment using tags from Azure Container Registry into an Azure Kubernetes Cluster
 | Azure Kubernetes Cluster | Kubernetes cluster deployed through Helm Charts on Azure Kubernetes Service (AKS), with basic load balancer service, auto-scaling of pods 
 | Azure Keyvault Integration | The deployment pipeline uses the Azure Key Vault service to store & refer to secrets at Pod level. The code is a current implementation of a [work-around](https://github.com/Azure/kubernetes-keyvault-flexvol/issues/28) till native Key Vault service support is enabled.
 | Azure Traffic Manager | Traffic manager service in Azure to re-direct traffic across multiple geo-clusters. Currently this will be pointing to the single cluster deployed.
