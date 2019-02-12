@@ -66,7 +66,7 @@ The template accepts following optional parameters, if not provided it assumes d
 
 Deploy your own using the button below, which uses the included ARM template.
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/Microsoft/containers-rest-cosmos-appservice-java/infrastructure/global-resources)
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/Microsoft/containers-rest-cosmos-aks-java/infrastructure/global-resources)
 
 ## Deploying Data
 
